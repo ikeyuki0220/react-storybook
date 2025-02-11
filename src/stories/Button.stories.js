@@ -1,39 +1,49 @@
-import { Button } from "./Button";
+import { Button } from "../Button";
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 export default {
-  title: "Example/Button",
+  title: "Components/Button",
   component: Button,
   tags: ["autodocs"],
+  args: {
+    label: "Button",
+    backgroundColor: "",
+  },
   argTypes: {
-    backgroundColor: { control: "color" },
+    label: {
+      description: "ボタンのラベル名",
+      table: {
+        defaultValue: {
+          summary: "",
+        },
+        type: {
+          summary: "string",
+        },
+      },
+    },
+    backgroundColor: {
+      description: "ボタンの背景色",
+      table: {
+        defaultValue: {
+          summary: "",
+        },
+        type: {
+          summary: "string",
+        },
+      },
+    },
   },
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary = {
+export const Default = {};
+
+export const Red = {
   args: {
-    primary: true,
-    label: "Button",
+    backgroundColor: "red",
   },
 };
 
-export const Secondary = {
+export const Yellow = {
   args: {
-    label: "Button",
-  },
-};
-
-export const Large = {
-  args: {
-    size: "large",
-    label: "Button",
-  },
-};
-
-export const Small = {
-  args: {
-    size: "small",
-    label: "Button",
+    backgroundColor: "yellow",
   },
 };

@@ -1,0 +1,29 @@
+.btn {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 120px;
+  margin: auto;
+  padding: 1rem 4rem;
+  font-weight: bold;
+  border: 2px solid #27acd9;
+  background: #27acd9;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn[data-background-color="red"] {
+  background: #d92771;
+  border: 2px solid #d92771;
+}
+
+.btn[data-background-color="yellow"] {
+  background: rgb(217, 190, 39);
+  border: 2px solid rgb(217, 190, 39);
+}
+
+.btn:hover {
+  color: #27acd9;
+  background: #fff;
+}
